@@ -1,5 +1,5 @@
 ---
-title: Google Summer of Code 2025 – Disgitbot: GitHub-Discord Integration Platform
+title: "Google Summer of Code 2025 - Disgitbot: GitHub-Discord Integration Platform"
 contributor: Tianqin Meng
 github: https://github.com/tqmsh
 project_repo: https://github.com/ruxailab/disgitbot
