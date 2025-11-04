@@ -1,8 +1,9 @@
 # GSoC 2025 — Final Work Report
 
-> AI-Powered Accessibility Evaluation in Ruxailab
->
-> Last updated: 2025-11-04
+---
+> # <img align="center" width="60px" src="https://en.opensuse.org/images/9/91/Gsocsun.png"> GSoC'25 — > AI-Powered Accessibility Evaluation in Ruxailab
+
+
 
 ---
 
@@ -11,7 +12,7 @@
 | Category | Details |
 |---|---|
 | Contributor | Vishal Kumar ([@saltykheera](https://github.com/saltykheera)) |
-| Email | N/A |
+| Email | vishal.kumar-ug23@nsut.ac.in |
 | Organization | URAMAKI LAB ([ruxailab](https://github.com/ruxailab)) |
 | Project | AI-Powered Accessibility Evaluation in Ruxailab |
 | Program Page | https://summerofcode.withgoogle.com/programs/2025/organizations/uramaki-lab |
@@ -187,3 +188,8 @@ This project unified manual, automated, and AI-assisted accessibility evaluation
 - Organization GitHub: https://github.com/ruxailab
 - GSoC Org Page: https://summerofcode.withgoogle.com/programs/2025/organizations/uramaki-lab
 - Proposal (public): https://docs.google.com/document/d/e/2PACX-1vSR2hrXOH9RfvwxAV863VpcSCTR0UnLLn_6OwaXJzYu8GEZqc506wuevT0qfMuSPq9hDIrzZCOawuMC/pub
+
+---
+
+**Submitted as part of Google Summer of Code 2025 – Final Work Proof**  
+© 2025 RUXAILab • Developed by vishal kumar
