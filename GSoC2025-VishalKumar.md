@@ -3,8 +3,6 @@
 ---
 > # <img align="center" width="60px" src="https://en.opensuse.org/images/9/91/Gsocsun.png"> GSoC'25 — > AI-Powered Accessibility Evaluation in Ruxailab
 
-
-
 ---
 
 ## At a glance
@@ -164,16 +162,6 @@ Challenges overcome:
 | AI Accessibility API — Commits delivered | https://github.com/ruxailab/ai-accessibility-api/commits/main/?author=saltykheera |
 | Main App (RUXAILAB) — Feature work | https://github.com/ruxailab/RUXAILAB/commits/organization-feature-accessibility/?author=saltykheera |
 | Automatic Testing Backend — Feature work | https://github.com/ruxailab/accessiblity-testing-backend/commits/main/?author=saltykheera |
-
----
-
-## Additional materials
-
-| Type | URL |
-|---|---|
-| Figma / Design | N/A |
-| Blog post | N/A |
-| Demo / Video | N/A |
 
 ---
 
