@@ -12,7 +12,7 @@ mentors:
   - Vinicius
   - Marc
   - Karine Pistili
-date: 2024-11-11
+date: 2024-09-05
 ---
 
 # <img align="center" width="60px" src="https://en.opensuse.org/images/9/91/Gsocsun.png"> GSoC'24 — Eye Tracking Algorithm Optimization Based on Low-Resolution Cameras
@@ -177,4 +177,4 @@ Special thanks to mentors **Vinicius**, **Marc**, and **Karine Pistili** for the
 ---
 
 **Submitted as part of Google Summer of Code 2024 – Final Work Proof**  
-© 2024 RUXAILAB • Developed by Sitam Meur
+© 2025 RUXAILAB • Developed by Sitam Meur
