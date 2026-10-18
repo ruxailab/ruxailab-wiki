@@ -5,13 +5,19 @@
 ## Contributor
 
 - **Name:** Justin Timothy
+- **Organization:** [Uramaki LAB](https://github.com/ruxailab)
 - **GitHub:** [@tim48-robot](https://github.com/tim48-robot)
 - **Email:** [justintimothy303@gmail.com](mailto:justintimothy303@gmail.com)
 - **LinkedIn:** [Justin Timothy](https://www.linkedin.com/in/justin-timothy-w-b6b28817b/)
 
+## Mentors
+
+- [Marc Gonzalez Capdevila](https://github.com/marcgc21)
+- Karine Pistili
+
 ## Project
 
-**Unified Logging and Traceability System for Usability Studies** (medium, 175 hours; mentors: Marc G.C and Karine Pistili; organization: Uramaki LAB). The project adds study activity logging to RUXAILAB: participant activity is recorded through a trusted server boundary, without storing answers or personal data, and researchers can read it in a Log Explorer.
+**Unified Logging and Traceability System for Usability Studies** (medium, 175 hours). The project adds study activity logging to RUXAILAB: participant activity is recorded through a trusted server boundary, without storing answers or personal data, and researchers can read it in a Log Explorer.
 
 - **Project proposal:** [Unified Logging and Traceability System for Usability Studies — GSoC 2026](https://summerofcode.withgoogle.com/programs/2026/projects/mTtZZ2Lq)
 - **Project source:** [RUXAILAB](https://github.com/ruxailab/RUXAILAB)
@@ -106,34 +112,43 @@ All PRs I opened during GSoC 2026, grouped by topic.
 
 ### Logging pipeline
 
-- [#2111 — Milestone 1: backend logging pipeline](https://github.com/ruxailab/RUXAILAB/pull/2111) — ✅ Merged
-- [#2295 — Trusted study-log ingestion](https://github.com/ruxailab/RUXAILAB/pull/2295) — ✅ Merged
+| PR | Title | Status | Created | Merged |
+| --- | --- | --- | --- | --- |
+| [#2111](https://github.com/ruxailab/RUXAILAB/pull/2111) | Milestone 1: backend logging pipeline | ✅ Merged | 2026-06-12 | 2026-07-02 |
+| [#2295](https://github.com/ruxailab/RUXAILAB/pull/2295) | Trusted study-log ingestion | ✅ Merged | 2026-08-17 | 2026-08-24 |
 
 ### Log Explorer and researcher view
 
-- [#2338 — Log Explorer](https://github.com/ruxailab/RUXAILAB/pull/2338) — ✅ Merged
-- [#2379 — Improve unmoderated study activity logs](https://github.com/ruxailab/RUXAILAB/pull/2379) — ✅ Merged
-- [#2405 — Participant timeline view](https://github.com/ruxailab/RUXAILAB/pull/2405) — ✅ Merged
-- [#2451 — Study log overview and server-side export](https://github.com/ruxailab/RUXAILAB/pull/2451) — 🔍 Open, in review
+| PR | Title | Status | Created | Merged |
+| --- | --- | --- | --- | --- |
+| [#2338](https://github.com/ruxailab/RUXAILAB/pull/2338) | Log Explorer | ✅ Merged | 2026-08-31 | 2026-09-14 |
+| [#2379](https://github.com/ruxailab/RUXAILAB/pull/2379) | Improve unmoderated study activity logs | ✅ Merged | 2026-09-23 | 2026-09-25 |
+| [#2405](https://github.com/ruxailab/RUXAILAB/pull/2405) | Participant timeline view | ✅ Merged | 2026-10-01 | 2026-10-13 |
+| [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451) | Study log overview and server-side export | 🔍 Open, in review | 2026-10-18 | — |
 
 ### Making study methods work and log
 
-- [#2402 — Fix moderated studies and enable their logging](https://github.com/ruxailab/RUXAILAB/pull/2402) — ✅ Merged
-- [#2329 — Add moderated session group indexes](https://github.com/ruxailab/RUXAILAB/pull/2329) — ✅ Merged
-- [#2404 — Fix invite membership and support anonymous participants](https://github.com/ruxailab/RUXAILAB/pull/2404) — ✅ Merged. Joining a study now requires a valid invitation, and participants on a no-login link get an anonymous account, so their answers and logs are saved.
-- [#2450 — Card sorting and focus group logging](https://github.com/ruxailab/RUXAILAB/pull/2450) — 🔍 Open, in review
+| PR | Title | Status | Created | Merged |
+| --- | --- | --- | --- | --- |
+| [#2402](https://github.com/ruxailab/RUXAILAB/pull/2402) | Fix moderated studies and enable their logging | ✅ Merged | 2026-09-30 | 2026-10-01 |
+| [#2329](https://github.com/ruxailab/RUXAILAB/pull/2329) | Add moderated session group indexes | ✅ Merged | 2026-08-28 | 2026-09-01 |
+| [#2404](https://github.com/ruxailab/RUXAILAB/pull/2404) | Fix invite membership and support anonymous participants | ✅ Merged | 2026-10-01 | 2026-10-15 |
+| [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450) | Card sorting and focus group logging | 🔍 Open, in review | 2026-10-18 | — |
 
 ### Other fixes during GSoC
 
-- [#2169 — Study access control and security fixes](https://github.com/ruxailab/RUXAILAB/pull/2169) — ✅ Merged
-- [#2124 — Fix sorting in Community Studies](https://github.com/ruxailab/RUXAILAB/pull/2124) — ✅ Merged
+| PR | Title | Status | Created | Merged |
+| --- | --- | --- | --- | --- |
+| [#2169](https://github.com/ruxailab/RUXAILAB/pull/2169) | Study access control and security fixes | ✅ Merged | 2026-07-05 | 2026-07-15 |
+| [#2124](https://github.com/ruxailab/RUXAILAB/pull/2124) | Fix sorting in Community Studies | ✅ Merged | 2026-06-19 | 2026-07-02 |
+
+[#2404](https://github.com/ruxailab/RUXAILAB/pull/2404) also matters for logging: joining a study now requires a valid invitation, and participants on a no-login link get an anonymous account, so their answers and logs are saved.
 
 ## Additional materials
 
+- [Study activity logging developer guide](logging.md) (this wiki)
 - [Logging extension guide](https://github.com/ruxailab/RUXAILAB/blob/develop/docs/logging-extension-guide.md)
 - [Figma: PoC Unified Logging](https://www.figma.com/design/fbnBw4aNg6EcBf88Sp0TGp/PoC-Unified-Logging?node-id=0-1&p=f&t=PKIEFl41DPHFPKfw-0)
-- [GitHub project (Kanban)](https://github.com/users/tim48-robot/projects/1)
-- [Milestones](https://github.com/tim48-robot/RUXAILAB/milestones)
 - Demo videos:
   - [Log Explorer preview (#2338)](https://youtu.be/mHG_UilcHTc)
   - [Moderated studies after the fix (#2402)](https://youtu.be/YCAf7uTm1Yg)
