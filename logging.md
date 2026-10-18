@@ -1,4 +1,4 @@
-# Study activity logging — developer guide
+# Study activity logging - developer guide
 
 This guide explains how to add logs to RUXAILAB: more events for a study type that already logs, or logging for a new study type. The full reference (every event, its allowed fields and how it is verified) is in the repository: [`docs/logging-extension-guide.md`](https://github.com/ruxailab/RUXAILAB/blob/develop/docs/logging-extension-guide.md).
 
@@ -125,7 +125,7 @@ For every new type or event, test:
 
 ## Related pages
 
-- [GSoC 2026 proof of work — Justin Timothy](GSoC2026-JustinTimothy.md)
+- [GSoC 2026 proof of work - Justin Timothy](GSoC2026-JustinTimothy.md)
 - [Logging reference in the repository](https://github.com/ruxailab/RUXAILAB/blob/develop/docs/logging-extension-guide.md)
 - [Trusted ingestion PR #2295](https://github.com/ruxailab/RUXAILAB/pull/2295)
 - [Log Explorer PR #2338](https://github.com/ruxailab/RUXAILAB/pull/2338)

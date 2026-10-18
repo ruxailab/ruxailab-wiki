@@ -1,4 +1,4 @@
-# GSoC 2026 — Unified Logging and Traceability System for Usability Studies
+# GSoC 2026 - Unified Logging and Traceability System for Usability Studies
 
 ✅ Merged · 🔍 Open, in review · ⏳ Not started
 
@@ -13,27 +13,27 @@
 ## Mentors
 
 - [Marc Gonzalez Capdevila](https://github.com/marcgc21)
-- Karine Pistili
+- [Karine Pistili](https://github.com/KarinePistili)
 
 ## Project
 
 **Unified Logging and Traceability System for Usability Studies** (medium, 175 hours). The project adds study activity logging to RUXAILAB: participant activity is recorded through a trusted server boundary, without storing answers or personal data, and researchers can read it in a Log Explorer.
 
-- **Project proposal:** [Unified Logging and Traceability System for Usability Studies — GSoC 2026](https://summerofcode.withgoogle.com/programs/2026/projects/mTtZZ2Lq)
+- **Project proposal:** [Unified Logging and Traceability System for Usability Studies - GSoC 2026](https://summerofcode.withgoogle.com/programs/2026/projects/mTtZZ2Lq)
 - **Project source:** [RUXAILAB](https://github.com/ruxailab/RUXAILAB)
 
 ## Deliverables completed
 
 | Milestone | Status | PRs |
 | --- | --- | --- |
-| M1 — Backend logging ingestion | ✅ Merged | [#2111](https://github.com/ruxailab/RUXAILAB/pull/2111), [#2295](https://github.com/ruxailab/RUXAILAB/pull/2295) |
-| M2 — Log Explorer (unmoderated, moderated, heuristic) | ✅ Merged | [#2338](https://github.com/ruxailab/RUXAILAB/pull/2338), [#2379](https://github.com/ruxailab/RUXAILAB/pull/2379), [#2402](https://github.com/ruxailab/RUXAILAB/pull/2402), [#2405](https://github.com/ruxailab/RUXAILAB/pull/2405) |
-| M2 — Card sorting and focus group logging | 🔍 Open, in review | [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450) |
-| M3 part 1 — Overview dashboard | 🔍 Open, in review | [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451) |
-| M3 part 2 — Server-side export | 🔍 Open, in review | [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451) |
-| M4 — Tests and contributor guide | ✅ Merged (guide rewrite 🔍 in [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450)) | Tests in each PR above; [logging extension guide](https://github.com/ruxailab/RUXAILAB/blob/develop/docs/logging-extension-guide.md) |
+| M1 - Backend logging ingestion | ✅ Merged | [#2111](https://github.com/ruxailab/RUXAILAB/pull/2111), [#2295](https://github.com/ruxailab/RUXAILAB/pull/2295) |
+| M2 - Log Explorer (unmoderated, moderated, heuristic) | ✅ Merged | [#2338](https://github.com/ruxailab/RUXAILAB/pull/2338), [#2379](https://github.com/ruxailab/RUXAILAB/pull/2379), [#2402](https://github.com/ruxailab/RUXAILAB/pull/2402), [#2405](https://github.com/ruxailab/RUXAILAB/pull/2405) |
+| M2 - Card sorting and focus group logging | 🔍 Open, in review | [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450) |
+| M3 part 1 - Overview dashboard | 🔍 Open, in review | [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451) |
+| M3 part 2 - Server-side export | 🔍 Open, in review | [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451) |
+| M4 - Tests and contributor guide | ✅ Merged (guide rewrite 🔍 in [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450)) | Tests in each PR above; [logging extension guide](https://github.com/ruxailab/RUXAILAB/blob/develop/docs/logging-extension-guide.md) |
 
-### M1 — Backend logging ingestion ✅
+### M1 - Backend logging ingestion ✅
 
 Two callable Cloud Functions in `functions/src/https/logEvents.js`:
 
@@ -50,7 +50,7 @@ What the server enforces:
 
 In the browser, events wait in an IndexedDB queue and are retried until delivered. Logging is fail-open: a logging failure never blocks answering, saving or submitting, and it shows the participant nothing.
 
-### M2 — Log Explorer ✅
+### M2 - Log Explorer ✅
 
 The Logs page (`src/shared/views/LogsView.vue`) is available for unmoderated user tests, moderated user tests and heuristic evaluations.
 
@@ -62,7 +62,7 @@ The Logs page (`src/shared/views/LogsView.vue`) is available for unmoderated use
 
 **How this differs from the proposal:** there is no free-text search. Filters run as Firestore queries over the study's complete history, before pagination, so the browser never downloads all logs to search them. The participant timeline was not in the proposal; it was added because the flat event list was hard to read ([#2403](https://github.com/ruxailab/RUXAILAB/issues/2403)).
 
-### M2 — Card sorting and focus group logging 🔍
+### M2 - Card sorting and focus group logging 🔍
 
 In review in [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450):
 
@@ -70,7 +70,7 @@ In review in [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450):
 - **Card sorting:** logs study opened, consent accepted and study submitted. Consent and submission are verified against the saved `cardSortingAnswers`. Card and category names are free text, so they are never logged. Adds the card sorting Logs route; before this, the sidebar's Logs link for card sorting had no page behind it.
 - **Focus group:** the facilitator's client logs `SESSION_STARTED` and `SESSION_ENDED`. The server checks them against the live room and the scheduled session's status. Each event is stored once per session, and only the facilitator can send them. Adds the focus group Logs route.
 
-### M3 — Overview and export 🔍
+### M3 - Overview and export 🔍
 
 In review in [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451):
 
@@ -83,7 +83,7 @@ In review in [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451):
 - The export streams pages to the browser instead of writing a file to Firebase Storage with a 15-minute signed URL and deletion after 24 hours.
 - The export has no row limit.
 
-### M4 — Tests and contributor guide ✅
+### M4 - Tests and contributor guide ✅
 
 Tests were written with each PR instead of as a separate suite at the end:
 
@@ -97,14 +97,14 @@ The [logging extension guide](https://github.com/ruxailab/RUXAILAB/blob/develop/
 
 **Changes to the plan.** I dropped the Trace View (trace lifecycle), because I judged it would add little for researchers. I used that time to make logging work across study methods. I did the most-used methods first: unmoderated user tests, then moderated user tests (whose sessions first had to be fixed), then heuristic evaluations. This methodology work delayed the overview and export.
 
-- **Overview dashboard and export (M3)** 🔍 — delayed by the methodology work above; in review in [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451).
-- **Card sorting logging** 🔍 — the card sorting module was less developed than the others, so I left its logging for later. In review in [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450).
-- **Focus group logging** 🔍 — another GSoC contributor built the Focus Group module this summer, so its logging had to wait for the module to exist. A focus group session has one facilitator and many attendees, so this first version logs only the session start and end, sent by the facilitator. In review in [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450).
-- **Accessibility logging** ⏳ — accessibility studies have no Logs page yet, and the ingestion function does not accept them.
+- **Overview dashboard and export (M3)** 🔍 - delayed by the methodology work above; in review in [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451).
+- **Card sorting logging** 🔍 - the card sorting module was less developed than the others, so I left its logging for later. In review in [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450).
+- **Focus group logging** 🔍 - another GSoC contributor built the Focus Group module this summer, so its logging had to wait for the module to exist. A focus group session has one facilitator and many attendees, so this first version logs only the session start and end, sent by the facilitator. In review in [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450).
+- **Accessibility logging** ⏳ - accessibility studies have no Logs page yet, and the ingestion function does not accept them.
 
 ## Stretch goal (not committed)
 
-**M5 — AI emotion logging from audio/video recordings** ⏳ Not started. This was a stretch goal in the proposal and was never committed. The time went to the methodology work above.
+**M5 - AI emotion logging from audio/video recordings** ⏳ Not started. This was a stretch goal in the proposal and was never committed. The time went to the methodology work above.
 
 ## Pull requests
 
@@ -124,7 +124,7 @@ All PRs I opened during GSoC 2026, grouped by topic.
 | [#2338](https://github.com/ruxailab/RUXAILAB/pull/2338) | Log Explorer | ✅ Merged | 2026-08-31 | 2026-09-14 |
 | [#2379](https://github.com/ruxailab/RUXAILAB/pull/2379) | Improve unmoderated study activity logs | ✅ Merged | 2026-09-23 | 2026-09-25 |
 | [#2405](https://github.com/ruxailab/RUXAILAB/pull/2405) | Participant timeline view | ✅ Merged | 2026-10-01 | 2026-10-13 |
-| [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451) | Study log overview and server-side export | 🔍 Open, in review | 2026-10-18 | — |
+| [#2451](https://github.com/ruxailab/RUXAILAB/pull/2451) | Study log overview and server-side export | 🔍 Open, in review | 2026-10-18 | - |
 
 ### Making study methods work and log
 
@@ -133,7 +133,7 @@ All PRs I opened during GSoC 2026, grouped by topic.
 | [#2402](https://github.com/ruxailab/RUXAILAB/pull/2402) | Fix moderated studies and enable their logging | ✅ Merged | 2026-09-30 | 2026-10-01 |
 | [#2329](https://github.com/ruxailab/RUXAILAB/pull/2329) | Add moderated session group indexes | ✅ Merged | 2026-08-28 | 2026-09-01 |
 | [#2404](https://github.com/ruxailab/RUXAILAB/pull/2404) | Fix invite membership and support anonymous participants | ✅ Merged | 2026-10-01 | 2026-10-15 |
-| [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450) | Card sorting and focus group logging | 🔍 Open, in review | 2026-10-18 | — |
+| [#2450](https://github.com/ruxailab/RUXAILAB/pull/2450) | Card sorting and focus group logging | 🔍 Open, in review | 2026-10-18 | - |
 
 ### Other fixes during GSoC
 
