@@ -14,6 +14,8 @@
 
 - [Marc Gonzalez Capdevila](https://github.com/marcgc21)
 - [Karine Pistili](https://github.com/KarinePistili)
+- [xemyst](https://github.com/xemyst)
+- [Basma Hatem](https://github.com/BasmaElhoseny01)
 
 ## Project
 
