@@ -1,8 +1,6 @@
 # GSoC 2026 — Unified Logging and Traceability System for Usability Studies
 
-> Status as of 2026-10-18; this page will be updated as PRs merge.
->
-> ✅ **Merged** · 🔍 **Open, in review** · ⏳ **Not started**
+✅ Merged · 🔍 Open, in review · ⏳ Not started
 
 ## Contributor
 
