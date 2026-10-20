@@ -8,7 +8,7 @@
 
 ## Project
 
-**Focus Group Management and Analysis Module for RUXAILAB** (medium, 175 hours; mentor: Marc). The project adds a moderated, multi-participant focus-group workflow to RUXAILAB, from study setup and live sessions through post-session review and analysis.
+**Focus Group Management and Analysis Module for RUXAILAB** (medium, 175 hours; mentors: Marc and Karine). The project adds a moderated, multi-participant focus-group workflow to RUXAILAB, from study setup and live sessions through post-session review and analysis.
 
 - **Project proposal:** [Focus Group Management and Analysis Module — GSoC 2026](https://summerofcode.withgoogle.com/programs/2026/projects/4HOKx20I)
 - **Project source:** [RUXAILAB](https://github.com/ruxailab/RUXAILAB)
