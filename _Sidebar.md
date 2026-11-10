@@ -1,14 +1,14 @@
 ## 🏠 Home
 - [About](https://github.com/ruxailab/RUXAILAB/wiki/Home)
+- [Wiki contribution guide](https://github.com/ruxailab/RUXAILAB/wiki/README)
 
 ## 🛠️ Development
 - [Developer Guide](https://github.com/ruxailab/RUXAILAB/wiki/Developer-Guide)
-  - [Wiki contribution guide](https://github.com/ruxailab/RUXAILAB/wiki/README)
-  - [Codebase folder structure](https://github.com/ruxailab/RUXAILAB/wiki/Folder-structure)
-  - [Vue.js and Vuetify study guide](https://github.com/ruxailab/RUXAILAB/wiki/VueJs-and-Vuetify-Study-Guide)
-  - [Focus Group developer guide](https://github.com/ruxailab/RUXAILAB/wiki/focusgroups)
-  - [Focus Group analysis developer guide](https://github.com/ruxailab/RUXAILAB/wiki/analysis)
-  - [Study activity logging developer guide](https://github.com/ruxailab/RUXAILAB/wiki/logging)
+- [Codebase folder structure](https://github.com/ruxailab/RUXAILAB/wiki/Folder-structure)
+- [Vue.js and Vuetify study guide](https://github.com/ruxailab/RUXAILAB/wiki/VueJs-and-Vuetify-Study-Guide)
+- [Focus Group developer guide](https://github.com/ruxailab/RUXAILAB/wiki/focusgroups)
+- [Focus Group analysis developer guide](https://github.com/ruxailab/RUXAILAB/wiki/analysis)
+- [Study activity logging developer guide](https://github.com/ruxailab/RUXAILAB/wiki/logging)
 
 ## 🧭 Architecture & methodologies
 - [Architecture overview](https://github.com/ruxailab/RUXAILAB/wiki/Architecture)
