@@ -1,51 +1,38 @@
-# 🧠 RUXAILAB WIKI Repository
+# Contributing to the RUXAILAB Wiki
 
-Welcome to the **RUXAILAB WIKI repository**!
-This space was created to **centralize and version our internal documentation**, allowing anyone in the team to contribute with improvements, fixes, or new sections through Pull Requests (PRs).
+The source for the RUXAILAB documentation is maintained in the
+[ruxailab/ruxailab-wiki repository](https://github.com/ruxailab/ruxailab-wiki).
+All documentation contributions must be proposed there.
 
----
+## How publication works
 
-## 📘 Purpose
+1. Make your documentation changes in a branch or fork of
+   [ruxailab/ruxailab-wiki](https://github.com/ruxailab/ruxailab-wiki).
+2. Open a pull request against that repository's `main` branch.
+3. After the pull request is reviewed and accepted, the RUXAILAB maintainers
+   update the published
+   [RUXAILAB GitHub Wiki](https://github.com/ruxailab/RUXAILAB/wiki).
 
-The main goal of this repository is to **facilitate collaboration** in building and maintaining the RUXAILAB WIKI.
-Here, you can propose **updates, edits, or new articles** by submitting a Pull Request.
+The `RUXAILAB.wiki` repository is the published wiki itself. Contributors
+should not submit changes there directly; maintainers publish accepted
+documentation updates from the source repository.
 
----
+## Contribution steps
 
-## 🚀 How to Contribute
-
-1. **Fork** this repository.
-2. **Create a new branch** for your update:
+1. Fork and clone [ruxailab/ruxailab-wiki](https://github.com/ruxailab/ruxailab-wiki).
+2. Create a branch for your change:
 
    ```bash
-   git checkout -b update/section-name
+   git checkout -b docs/short-description
    ```
-3. **Edit or add Markdown (`.md`) files** in the appropriate folder.
-4. **Commit your changes**:
 
-   ```bash
-   git commit -m "Update section about [topic]"
-   ```
-5. **Open a Pull Request (PR)** describing what you’ve changed.
+3. Edit or add Markdown files. Keep existing page names and URLs stable,
+   especially GSoC contributor pages.
+4. Check links and Markdown formatting, and update `_Sidebar.md` when adding
+   or renaming a page.
+5. Commit your changes and open a pull request targeting `main` in
+   `ruxailab/ruxailab-wiki`.
+6. Describe the change and identify any pages or navigation that need review.
 
----
-
-## 🧩 Best Practices
-
-* Keep a **technical and informative tone**.
-* Avoid personal or sensitive information.
-* Always proofread for grammar and Markdown formatting before submitting.
-* If your update requires validation from another team, mention them in the PR.
-
----
-
-## 💬 Questions or Suggestions?
-
-Reach out to us on discord!
-
----
-
-## 🪴 About RUXAILAB
-
-**RUXAILAB** is a lab focused on research and development of digital experiences with an emphasis on **usability, innovation, and real-world impact**.
-Our WIKI serves as the central hub for shared knowledge, best practices, and internal guidelines.
+For questions, use the
+[RUXAILAB Discord](https://discord.com/channels/1209902463239593984/1209902463713288293).
