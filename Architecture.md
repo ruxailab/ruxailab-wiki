@@ -140,7 +140,7 @@ operation before changing a client controller or a function.
 ```mermaid
 sequenceDiagram
     actor Researcher
-    actor Participant
+    actor StudyParticipant as Participant
     participant UI as Study module
     participant Router as Router / access policy
     participant Firebase as Firebase client SDK
@@ -157,7 +157,7 @@ sequenceDiagram
     UI->>Function: Request trusted operation
     Function->>Function: Validate caller and request
     Function->>DB: Perform authorized server-side operation
-    Participant->>UI: Open invite or participant flow
+    StudyParticipant->>UI: Open invite or participant flow
     UI->>Router: Navigate to study route
     Router->>Router: Check global and study access as required
     UI->>Firebase: Submit permitted response data
