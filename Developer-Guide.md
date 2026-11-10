@@ -8,7 +8,7 @@ with a map of the codebase and common development workflows.
 
 ## Prerequisites
 
-- Node.js `>=22.22.1` for the root application.
+- Node.js 24 for local development.
 - Node.js 24 for the Firebase Cloud Functions project.
 - npm and Git.
 - A Firebase project, or the Firebase Emulator Suite for local development.

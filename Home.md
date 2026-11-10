@@ -29,10 +29,10 @@ transcription, sentiment analysis, PDF generation, and video calls.
 
 ### Prerequisites
 
-- Node.js `>=22.22.1` for the main application.
+- Node.js 24 for local development and Cloud Functions.
 - npm and Git.
 - A Firebase project, or the Firebase Emulator Suite.
-- Python 3.11.8 is listed in the contribution guide; Cloud Functions use Node.js 24.
+- Python 3.11.8 is also listed in the contribution guide for workflows that need it.
 
 ### Install and configure
 
