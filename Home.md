@@ -1,201 +1,112 @@
 <div align="center">
-  <h1> Welcome to the RUXAILAB wiki!</h1>
-  <p><strong>UX Remote LAB</strong> is a user-friendly platform for usability testing and heuristic evaluation. Designed and provided by UX Remote LAB, it is a web application developed to assist project creators in gathering valuable insights from their users.</p>
+  <h1>Welcome to RUXAILAB</h1>
+  <p>An open-source platform for user research, usability testing, and accessibility evaluation.</p>
 </div>
-
-<hr />
 
 ## About
 
-UX Remote LAB is an open-source platform designed to collect usability feedback from users. It allows you to gather user reviews, analyze them, and create comprehensive reports to better understand your application's usability. Additionally, it offers heuristic tests, enabling experts to evaluate your application's compliance with usability principles.
+RUXAILAB helps researchers plan studies, collect participant feedback, and
+analyze usability and user experience. The application includes Card Sorting,
+Focus Group, Heuristic Evaluation, and User Testing modules. An accessibility
+module is also under development; its study category is currently marked as
+coming soon.
 
-### Community & Experience
+The application is built with Vue 3 and Vuetify and uses Firebase
+Authentication, Cloud Firestore, Realtime Database, Cloud Storage, and Cloud
+Functions. Optional integrations provide services such as eye tracking,
+transcription, sentiment analysis, PDF generation, and video calls.
 
-UX Remote LAB provides a collaborative environment for creators to share their projects and receive voluntary assistance with usability reviews. You can communicate with evaluators and send them invitations for testing your applications.
+## Explore the documentation
 
-### Support
+- [Developer Guide](Developer-Guide) — setup, project layout, and common commands.
+- [Architecture](Architecture) — application, Firebase, and access-control diagrams.
+- [Study methodologies](Study-Methodologies) — method selection and workflows.
+- [Focus Group developer guide](focusgroups)
+- [Focus Group analysis guide](analysis)
+- [Study activity logging guide](logging)
 
-- [Report a Bug 🐛](https://github.com/uramakilab/remote-usability-lab/issues/new)
-- [Request a Feature 🚀](https://github.com/uramakilab/remote-usability-lab/issues/new)
-- [Ask a Question 🤗](https://github.com/uramakilab/remote-usability-lab/discussions)
+## Run RUXAILAB locally
 
-For commercial support, academic collaborations, and answers to common questions, please use [Get Support]() to contact us.
+### Prerequisites
 
-### Development Environment
+- Node.js 24 for local development and Cloud Functions.
+- npm and Git.
+- A Firebase project, or the Firebase Emulator Suite.
+- Python 3.11.8 is also listed in the contribution guide for workflows that need it.
 
-- Node.js version: ≤ 22.15.1
-- Vue.js version: 3.5.13
-- Vue CLI version: 5.0.8
-- Vuetify version: 3.7.18
-- Python version: 3.11.8
-
-## Video Guide
-
-<a href='https://youtu.be/dAf4LRxITCc'>Tutorial - Running RUXAILAB with Firebase Emulators 🖥️</a>
-
-## Getting Started
-
-Follow these steps to set up the development environment and run the application locally:
+### Install and configure
 
 ```bash
-# Install dependencies
+git clone https://github.com/ruxailab/RUXAILAB.git
+cd RUXAILAB
 npm install
-pip install
+cp .env.example .env
 ```
 
-Open Firebase / Firestore and start a project.
-
-- In the project dashboard, on the left hand side menu, click on build, click on realtime database and activate it.
-- In the project dashboard, click on the settings button on the left side of the screen (gear icon).
-- In the project settings, under the general tab, scroll down to the end of the screen, you should find the following screen.
-  <div align="center">
-    <img src="public/FBexample.png" alt="FBexample" height="450" />
-  </div>
-
-In the folder of your project, create a file with the name .env and put the following data:
-
-```ini
-VUE_APP_FIREBASE_API_KEY=""
-VUE_APP_FIREBASE_AUTH_DOMAIN=""
-VUE_APP_FIREBASE_DB_URL=""
-VUE_APP_FIREBASE_PROJECT_ID=""
-VUE_APP_FIREBASE_STORAGE_BUCKET=""
-VUE_APP_FIREBASE_MESSAGING_SENDER_ID=""
-VUE_APP_FIREBASE_APP_ID=""
-
-# Doesn't need changes
-VUE_APP_I18N_LOCALE="en"
-VUE_APP_I18N_FALLBACK_LOCALE="en"
-```
-
-Then, complete the information in your .env file with the firebase information, respectively in their fields, and run:
+Set the Firebase and other environment values required for your setup in
+`.env`. For local emulator development, configure the emulator flags and ports
+in `.env` using `.env.example`, then start the configured Firebase emulators
+from the repository root:
 
 ```bash
- # Run the application locally
- npm run serve
-```
-
-## Running with Firebase Emulators
-
-- Add `firebase.json` file with the following code snippet:
-
-```javascript
-    {
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
-  },
-  "functions": [
-    {
-      "predeploy": ["npm --prefix \"$RESOURCE_DIR\" run lint"],
-      "source": "functions",
-      "codebase": "functions"
-    },
-    {
-      "source": "weight_function",
-      "codebase": "weight_function",
-      "ignore": ["venv", ".git", "firebase-debug.log", "firebase-debug.*.log"]
-    }
-  ],
-  "hosting": {
-    "site": "ruxailab-dev",
-    "public": "dist",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  },
-  "emulators": {
-    "auth": {
-      "port": 9099
-    },
-    "functions": {
-      "port": 5001
-    },
-    "firestore": {
-      "port": 8081
-    },
-    "hosting": {
-      "port": 5000
-    },
-    "ui": {
-      "enabled": true
-    },
-    "singleProjectMode": true,
-    "storage": {
-      "port": 9199
-    }
-  },
-  "storage": {
-    "rules": "storage.rules"
-  }
-}
-
-```
-
-Setup your Firebase Emulators by uncommenting the lines under 'emulators if running locally' in src/index.js.
-
-Run:
-
-```bash
-
-firebase use (choose your option)
 firebase emulators:start
-
 ```
 
-## Running Python Function
-
-To calculate heuristic weights, run:
+Start the application:
 
 ```bash
-# Run locally
- firebase init functions
- firebase use weight_function
- firebase emulators:start --only functions
+npm run serve
 ```
 
-Then get the url, go to the .env file and add the following sentence:
+The development server prints the local application URL. Do not commit `.env`
+files, API keys, or private credentials.
 
-```javascript
-// Your previous code
-VUE_APP_FIREBASE_PYTHON_FUNCTION = 'url'
-```
+For the Docker-based emulator setup, see the
+[contribution guide](https://github.com/ruxailab/RUXAILAB/blob/develop/CONTRIBUTING.md);
+it exposes the app at `http://localhost:8080` and Firebase Emulator UI at
+`http://localhost:4000`.
 
-If you want to deply the fuction, change your account from spark to blaze, run:
+### Cloud Functions
+
+Cloud Functions are a separate npm project and require Node.js 24. If you are
+working on them, install their dependencies and configure their environment
+separately:
 
 ```bash
-   firebase deploy --only functions
+cd functions
+npm install
+cp .env.example .env
 ```
 
-Go to firebase panel -> functions -> on the right side of the function press "detailed usage statistics".
-There you can get the url and replace on .env file.
+Use `functions/.env.example` for server-side configuration. Never put server
+secrets in frontend `VUE_APP_*` variables.
 
-## Docker Setup
+## Useful checks
 
-### Building the Docker Image
+Run from the repository root:
 
-To build the Docker image for UX Remote LAB, navigate to the project's root directory and run the following command:
+| Command | Purpose |
+| ------- | ------- |
+| `npm test` | Run frontend unit tests. |
+| `npm run test:rules` | Run Firebase security-rules tests with emulators. |
+| `npm run lint` | Lint frontend source. |
+| `npm run build:dev` | Create a development build. |
+| `npm run build:prod` | Create a production build. |
+| `npm --prefix functions test` | Run Cloud Functions tests. |
+| `npm --prefix functions run lint` | Lint Cloud Functions. |
 
-```bash
-docker build -t uxremotelab .
-```
+Use the relevant checks for the code you change. Avoid deploying to a shared
+Firebase project unless you have verified the active project and have
+authorization to deploy.
 
-### Running the Application using Docker
+## Contribute and get help
 
-After building the image, you can run the application in a Docker container using:
+Read the [contribution guidelines](https://github.com/ruxailab/RUXAILAB/blob/develop/CONTRIBUTING.md)
+before opening a pull request.
 
-Note: Ensure you have created the .env file and filled it with all required variables before running the following command:
+- [Report a bug](https://github.com/ruxailab/RUXAILAB/issues/new?template=bug.yml)
+- [Request a feature](https://github.com/ruxailab/RUXAILAB/issues/new?template=feature.yml)
+- [Ask a question in GitHub Discussions](https://github.com/ruxailab/RUXAILAB/discussions)
+- [RUXAILAB Discord](https://discord.com/channels/1209902463239593984/1209902463713288293)
 
-```bash
-docker run -d --env-file .env -p 5000:5000 uxremotelab
-```
-
-Visit `http://localhost:5000` in your browser to access the UX Remote LAB platform.
-
-## License
-
-MIT © [UX Remote LAB](https://github.com/uramakilab/remote-usability-lab)
+RUXAILAB is distributed under the [MIT License](https://github.com/ruxailab/RUXAILAB/blob/develop/LICENSE).
